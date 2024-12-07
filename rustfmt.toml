@@ -1,0 +1,18 @@
+brace_style = "PreferSameLine"
+
+binop_separator = "Back"
+overflow_delimited_expr = true
+
+imports_granularity = "Crate"
+imports_layout = "HorizontalVertical"
+reorder_impl_items = true
+
+# fn_params_layout  = "Vertical"
+fn_single_line = true
+force_multiline_blocks = false
+
+format_code_in_doc_comments = true
+use_field_init_shorthand = true
+use_try_shorthand = true
+
+# hide_parse_errors = true

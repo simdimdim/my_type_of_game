@@ -1,0 +1,9 @@
+[package]
+default-run = "main"
+edition = "2024"
+name = "fu_clone"
+version = "0.1.0"
+
+[dependencies]
+bevy = "0.15.0"
+rand = "0.8.5"
