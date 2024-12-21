@@ -1,9 +1,57 @@
 [package]
 default-run = "main"
 edition = "2024"
-name = "fu_clone"
+name = "my_type_of_game"
 version = "0.1.0"
 
+[profile.dev]
+opt-level = 1
+[profile.dev.package."*"]
+opt-level = 3
+[profile.release]
+codegen-units = 1
+debug = false
+incremental = false
+lto = true
+opt-level = 3
+
 [dependencies]
-bevy = "0.15.0"
+anyhow = "1.0.94"
+# bevy-inspector-egui = "0.28.0"
+confy = "0.6.1"
+leafwing-input-manager = "0.16.0"
 rand = "0.8.5"
+
+[dependencies.bevy]
+default-features = false
+features = [
+  "animation",
+  "bevy_asset", #   "bevy_audio",
+  "bevy_color",
+  "bevy_core_pipeline", #   "bevy_gilrs",
+  "bevy_gizmos", #   "bevy_gltf",
+  "bevy_mesh_picking_backend",
+  "bevy_pbr",
+  "bevy_picking",
+  "bevy_render",
+  "bevy_scene",
+  "bevy_sprite",
+  "bevy_sprite_picking_backend",
+  "bevy_state",
+  "bevy_text",
+  "bevy_ui",
+  "bevy_ui_picking_backend",
+  "bevy_window",
+  "bevy_winit", #   "custom_cursor",
+  "default_font", #   "hdr",
+  "multi_threaded",
+  "png",
+  "bmp",
+  "smaa_luts",
+  "sysinfo_plugin",
+  "tonemapping_luts", #   "vorbis",  #   "webgl2",
+  "x11",
+  "zstd",
+  "dynamic_linking", #   "serialize",  #   "shader_format_glsl",  #   "shader_format_spirv",
+]
+version = "0.15"
